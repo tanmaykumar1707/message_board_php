@@ -1,3 +1,5 @@
+<Important>
+
 1) Create Database name:  "board"
 2) Import sql file in the database :  "board.sql"  Present in the root directory
 
