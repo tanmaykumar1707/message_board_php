@@ -1,0 +1,52 @@
+body {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	background-color: white;
+}
+h2 {
+	font-family: Arial;
+	font-style: bold;
+	color: #2E6B2E;
+	font-size:20px;
+	padding-top:10px;
+	padding-left:50px;
+}
+#message{
+	font-size:1.1em;
+	font-style: bold;
+	padding:5px;
+	color: black;
+	background-color:#5CD65C;
+	border: 5px solid #5CD65C;
+	border-radius: 10px;
+}
+
+a {
+	padding-left:100px;
+	color:#FF5050;
+	font-size:15px;
+}
+a:hover{
+	color: yellow;
+}
+
+#form{
+/*	background-color: #9999FF;*/
+	border-radius: 10px;
+/*	box-shadow: 5px 5px 1px #888888;*/
+}
+
+img{
+	border: 5px solid #5CD65C;
+	-webkit-transition: width .5s,height .5s,-webkit-transform .5s;
+}
+
+img:hover{
+	border: 5px solid yellow;
+	border-radius: 10px;
+	-webkit-transform: scale(1.2,1.2);
+	position: relative;
+}
+#djf{
+	color:transparent;
+	background-color:transparent;
+}

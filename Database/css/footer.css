@@ -1,0 +1,58 @@
+/*For Footer Area Start*/
+/*  Footerrrrrr        */
+    
+    #footer h3{
+        text-decoration: underline;
+        font-family: fantasy;
+    } 
+    #footer{
+        color: white;
+        background-color: #696969;
+    }
+    #footer h4{
+        text-decoration: underline;
+        text-decoration-style: double;
+        
+    }
+    #footer ul li {
+        list-style-type: none;
+        
+        
+    }
+
+#footer footer-link a{
+    color:red;
+}
+
+    #footer .footer-top .footer-newsletter input[type="email"]{
+        border: 0;
+        padding: 6px 8px;
+        width:65%;
+        color: black;
+        
+    }
+    #footer .footer-top .footer-newsletter input[type="submit"]{
+        background: #009999;
+        border: 0;
+        width: 35%;
+        padding: 6px 0;
+        text-align: center;
+        color: #fff;
+        transition: 0.3s;
+        cursor: pointer;
+    }
+    #footer .footer-top .footer-newsletter input[type="submit"]:hover{
+     background: #13a456;
+    }
+    
+
+    
+    #footer .copyright{
+        text-align: left;
+        padding-top: 10px;
+        padding-left: 30px;
+        padding-bottom: 5px;
+        color: aliceblue;
+        
+    }
+
