@@ -6,3 +6,4 @@
 
 If Datbase name is different : 
 1)Go to Database Folder then edit "db.php" File
+2)None
