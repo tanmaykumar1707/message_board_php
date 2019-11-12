@@ -100,7 +100,7 @@
 
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right" >
-                        <li><a  href="databases2.php">HOME</a></li>
+                        <li><a  href="index.php">HOME</a></li>
                         <li><a class="active1" href="board_id.php"> BOARD ID</a></li>
                             
                      

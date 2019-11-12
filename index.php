@@ -148,7 +148,7 @@
 
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right" >
-                        <li><a class="active1" href="databases2.php">HOME</a></li>
+                        <li><a class="active1" href="index.php">HOME</a></li>
                         <li><a href="board_id.php"> BOARD ID</a></li>
                             
                      
@@ -188,7 +188,7 @@
                                  <strong>Error!</strong> <span id="ajax_mssg"> </span></h4>
                             </div>
 
-                            <form id="form" action=databases2.php method="post" enctype="multipart/form-data"  class="form-horizontal">
+                            <form id="form" action=index.php method="post" enctype="multipart/form-data"  class="form-horizontal">
                                            
                                              <div class=" form-group ">
                                                 <label for="category" class="control-label col-sm-3">Board Id: </label>
