@@ -10,7 +10,7 @@
 	 $video=(int)mysqli_real_escape_string($connection,$_POST['video']);
 	 $textsize=(int)mysqli_real_escape_string($connection,$_POST['textsize']);
     $board_id=(int)mysqli_real_escape_string($connection,$_POST['board_id']);
-        
+
 	 $prequery="insert into board2 (fac_name,message,color,file,time,size,board_id) values ('Vikash Kumar','{$message}','{$color}','no','{$video}','{$textsize}','{$board_id}')";
 	 $preresult=mysqli_query($connection,$prequery);
 	 if(!$preresult){
@@ -106,9 +106,9 @@
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/footer.css">
     <link type="text/css" rel="stylesheet" href="css/navbar.css">
-    
+
     <link href="styles.css" type="text/css" rel="stylesheet">
-    
+
          <script rel="text/javascript" src="js/java.js"></script>
 <!--         <script rel="text/javascript" src="js/java.js"></script>-->
     <style>
@@ -120,28 +120,28 @@
 </head>
 
 <body>
-   
+
     <!---------------------------Start of header containing Social icon and Mob no.-------------->
 
     <!-----------------------------End header containing Social icon and Mob no.----------------->
-        
-        
+
+
     <!--------------------------------Start of Heading and Search Box---------------------------->
-   
+
         <!--End of Logo and Search Bar-->
 
-  
+
     <!---------------------------------End for Heading and Search Box---------------------------->
-        
-      
-        
+
+
+
     <!---------------------------------Start of Menu Bar------------------------------>
     <div class="nav navbar navbar-default ">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                     <i class="fa fa-list-ul" style="font-size:20px;"></i>
-                   
+
                       </button>
                     <a class="navbar-brand" href="#myPage">Notification Board - Control room</a>
                 </div>
@@ -150,8 +150,8 @@
                     <ul class="nav navbar-nav navbar-right" >
                         <li><a class="active1" href="index.php">HOME</a></li>
                         <li><a href="board_id.php"> BOARD ID</a></li>
-                            
-                     
+
+
                     </ul>
 
                 </div>
@@ -161,17 +161,17 @@
     <!---------------------------------- End of Menu Bar------------------------------>
 
         <br>
-        
+
     <!---------------------------------Main Container--------------------------->
     <div class="container">
-       
-       
+
+
             <!---------------------------------Inner  Container----------------->
         <div class="row">
-               
-                
 
-            
+
+
+
                 <!-- -----------------------------------------SEND Form--------------------->
                 <div class="col-sm-12">
 
@@ -189,11 +189,11 @@
                             </div>
 
                             <form id="form" action=index.php method="post" enctype="multipart/form-data"  class="form-horizontal">
-                                           
+
                                              <div class=" form-group ">
                                                 <label for="category" class="control-label col-sm-3">Board Id: </label>
                                                 <div class="col-sm-4">
-                                                  
+
                                                   <select class="form-control" name="board_id" required>
                                                     <option value="">Select Board Id</option>
                                                     <?php
@@ -208,8 +208,8 @@
 
 
                                                 </div>
-                                            </div>            
-                                
+                                            </div>
+
                                             <div class=" form-group ">
                                                 <label for="category" class="control-label col-sm-3">Text: </label>
                                                 <div class="col-sm-4">
@@ -219,26 +219,26 @@
 
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="form-group">
                                                 <label for="email" class="control-label col-sm-3">Color: </label>
                                                <div class="input-group col-sm-6">
-                                                   
+
                                                     <input id="djf" name="color" class="color" class="form-control">
-                                                   
+
                                                 </div>
                                             </div>
-                                            
-                                           
-                                
+
+
+
                                         <div class="form-group">
                                                 <label for="email" class="control-label col-sm-3">Image: </label>
                                                <div class="input-group col-sm-6">
                                                     <input type="file" name="file" id="file" class="form-control">
-                                                    
-                                                </div> 
+
+                                                </div>
                                             </div>
-            
+
                                             <input type="number" name="textsize" value="22" hidden>
                                             <select name="video" hidden>
                                               <option value="1">no</option>
@@ -247,7 +247,7 @@
 
 
                                             <center> <input  type="submit" name="submit" value="SEND" cass="btn btn-primary">
-                                                
+
                                             </center>
 
                             </form>
@@ -255,14 +255,14 @@
                         </div>
                         <!-- End of Panel body div-->
 
-                    </div>    <!--                    Panel Ending-->             
+                    </div>    <!--                    Panel Ending-->
             </div><!--                Col Sm 12-->
-        </div>  
+        </div>
 <!--        END ROW-->
-        
+
         <h3>Previous Notifications : </h3>
-        
-        
+
+
         <h4>
         <table class="table table-striped">
     <thead>
@@ -276,23 +276,23 @@
              <?php
 
 
-    
+
 while($row = mysqli_fetch_assoc($result)){
 	//var_dump($row);
-    
+
 	$idwhile=$row['id'];
     ?>
-             <tr >  
-               
+             <tr >
+
                 <td>
-                 <?php 
+                 <?php
                 	echo $row['message'];
                 ?>
-                 
-                 
+
+
                  </td>
                  <td>
-                 <?php 
+                 <?php
                         if(file_exists ("images/".$idwhile.".jpeg")){
                         $imginfo=getimagesize("images/".$idwhile.".jpeg");
                             if($imginfo[1]>100){
@@ -304,38 +304,38 @@ while($row = mysqli_fetch_assoc($result)){
                                 $imginfo[0]=100;
                             }
                             echo "<img src='images/".$idwhile.".jpeg' height='".(int)$imginfo[1]."' width='".(int)$imginfo[0]."'>";
-                            } else 
-                     echo "No Image ";  
-                     ?>       
-                 </td>
-              
-                   <td><?php  echo $row['board_id']; ?> </td>  
-                 
-                 <td> 
-                 
-                 <?php  echo  "<a class='btn btn-danger'id=\"link\" href=\"?id=".$idwhile."\">delete</a>";  
+                            } else
+                     echo "No Image ";
                      ?>
                  </td>
-                 
+
+                   <td><?php  echo $row['board_id']; ?> </td>
+
+                 <td>
+
+                 <?php  echo  "<a class='btn btn-danger'id=\"link\" href=\"?id=".$idwhile."\">delete</a>";
+                     ?>
+                 </td>
+
                  </tr>
-                
-        <?php     
+
+        <?php
 }
 mysqli_free_result($result);
-             
+
 ?>
    </tbody>
-  </table>    
-    
+  </table>
+
     </h4>
- 
+
 <?php
-    
+
 //while($row = mysqli_fetch_assoc($result)){
 //	//var_dump($row);
 //    echo "<div id=\"message\">";
 //	$idwhile=$row['id'];
-//    
+//
 //	if(file_exists ("images/".$idwhile.".jpeg")){
 //	$imginfo=getimagesize("images/".$idwhile.".jpeg");
 //		if($imginfo[1]>100){
@@ -347,36 +347,36 @@ mysqli_free_result($result);
 //			$imginfo[0]=100;
 //		}
 //		echo "<img src='images/".$idwhile.".jpeg' height='".(int)$imginfo[1]."' width='".(int)$imginfo[0]."'>";
-//        
-//		
-//	
+//
+//
+//
 //	}
-//        
+//
 //
 //		echo "  Message: ".$row['message']."  ";
 //            echo " Board Id: ".$row['board_id'];
 //        echo " &nbsp; <a class='btn btn-danger'id=\"link\" href=\"?id=".$idwhile."\">delete</a>";
-//        
-//    
+//
+//
 //    echo "</div><br>";
 //}
 //mysqli_free_result($result);
 ?>
 
 
-        
-        
+
+
 </div>
-  
-
-
-   
-   
 
 
 
-   
-    
+
+
+
+
+
+
+
     <footer id="footer" >
         <div class="footer-top">
             <div class="container">
@@ -388,12 +388,12 @@ mysqli_free_result($result);
                     <div class="col-sm-3 footer-link">
                                             </div>
                     <div class=" col-sm-3 footer-contact">
-                       
+
                     </div>
                     <div class="col-sm-3 footer-newsletter">
                         <h4>Project Guide</h4>
-                        <p>  Suman Deb, CSE department,<br> NIT Agartala, Tripura</p>     
-                        
+                        <p>  Suman Deb, CSE department,<br> NIT Agartala, Tripura</p>
+
                     </div>
                 </div>
             </div>
